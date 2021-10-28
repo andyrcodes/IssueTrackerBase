@@ -6,7 +6,7 @@
 
         public string Title { get; set; } = string.Empty;
 
-        public string Description { get; set; } = string.Empty;
+        public string Description { get; set; } = default!;
 
         public DateTime Created { get; set; }
 
@@ -26,17 +26,17 @@
 
         public string DeveloperUserId { get; set; } = string.Empty;
 
-        public virtual Project? Project { get; set; }
+        public virtual Project Project { get; set; } = default!;
 
-        public virtual TicketPriority? TicketPriority { get; set; }
+        public virtual TicketPriority TicketPriority { get; set; } = default!;
 
-        public virtual TicketStatus? TicketStatus { get; set; }
+        public virtual TicketStatus TicketStatus { get; set; } = default!;
 
-        public virtual TicketType? TicketType { get; set; }
+        public virtual TicketType TicketType { get; set; } = default!;
 
-        public virtual AppUser? OwnerUser { get; set; }
+        public virtual AppUser OwnerUser { get; set; } = default!;
 
-        public virtual AppUser? DeveloperUser { get; set; }
+        public virtual AppUser DeveloperUser { get; set; } = default!;
 
         public virtual ICollection<TicketAttachment> Attachments { get; set; } = new HashSet<TicketAttachment>();
 
