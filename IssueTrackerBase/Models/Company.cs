@@ -23,7 +23,7 @@ namespace IssueTrackerBase.Models
 
         public virtual ICollection<AppUser> Members { get; set; } = new HashSet<AppUser>();
 
-        public virtual ICollection<Invitation> MyProperty { get; set; } = new HashSet<Invitation>();
+        public virtual ICollection<Invitation> Invitations { get; set; } = new HashSet<Invitation>();
 
     }
 }
